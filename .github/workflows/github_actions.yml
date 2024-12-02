@@ -1,0 +1,12 @@
+name: GitHub Actions
+on:
+    push:
+      branches:
+        - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - name: run tests
+          run:
+            python3 -m unittest
