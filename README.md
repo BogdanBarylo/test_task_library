@@ -22,11 +22,8 @@
    ```bash
    git clone git@github.com:BogdanBarylo/test_task_library.git
     ```
-2. **Установка зависимостей**
-    ```bash 
-    pip install -r requirements.txt
-    ```
-3. **Запуск приложения**
+
+2. **Запуск приложения**
     ```bash
     python main.py
     ```
