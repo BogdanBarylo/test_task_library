@@ -1,5 +1,6 @@
 from typing import Optional
 from model import Book
+from exception import BookNotFoundError
 import os
 import json
 
@@ -35,7 +36,7 @@ class Library:
             self.save_books()
             print(f"Книга с ID {book_id} удалена.")
         else:
-            print(f"Книга с ID {book_id} не найдена.")
+            raise BookNotFoundError(f"Книга с ID {book_id} не найдена.")
 
     def find_book_by_id(self, book_id: int) -> Optional[Book]:
         return next((book for book in self.books if book.id == book_id), None)
@@ -63,4 +64,4 @@ class Library:
             self.save_books()
             print(f"Статус книги с ID {book_id} обновлен на '{status}'.")
         else:
-            print(f"Книга с ID {book_id} не найдена.")
+            raise BookNotFoundError(f"Книга с ID {book_id} не найдена.")

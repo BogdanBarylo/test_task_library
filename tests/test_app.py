@@ -1,4 +1,5 @@
 import pytest
+from exception import BookNotFoundError
 from library_model import Library
 from validate import (validate_title,
                       validate_author,
@@ -16,14 +17,13 @@ def test_add_book(library):
 
 def test_remove_nonexistent_book(library):
     library.add_book("Война и мир", "Лев Толстой", 1869)
-    library.remove_book(99)
-    assert len(library.books) == 1
-
+    with pytest.raises(BookNotFoundError, match="Книга с ID 99 не найдена."):
+        library.remove_book(99)
 
 def test_update_book_status_invalid_id(library):
     library.add_book("Война и мир", "Лев Толстой", 1869)
-    library.update_book_status(99, "выдана")
-    assert library.books[0].status == "в наличии"
+    with pytest.raises(BookNotFoundError, match="Книга с ID 99 не найдена."):
+        library.update_book_status(99, "выдана")
 
 
 def test_search_books_multiple_criteria(library):
