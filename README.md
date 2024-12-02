@@ -1,3 +1,4 @@
+[![GitHub Actions](https://github.com/BogdanBarylo/test_task_library/actions/workflows/github_actions.yml/badge.svg)](https://github.com/BogdanBarylo/test_task_library/actions/workflows/github_actions.yml)
 # Library Manager
 
 ## Описание
