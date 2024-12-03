@@ -19,6 +19,6 @@ def validate_year(year: int) -> int:
 def validate_status(status: str) -> str:
     valid_statuses = ["в наличии", "выдана"]
     if status not in valid_statuses:
-        raise ValueError(f"Статус может быть только \
-                         {', '.join(valid_statuses)}.")
+        raise ValueError(
+            f"Статус может быть только {', '.join(valid_statuses)}.")
     return status

@@ -1,8 +1,8 @@
 import unittest
 import os
-from exception import BookNotFoundError
-from library_model import Library
-from validate import validate_title, validate_author, validate_year, validate_status
+from app.exception import BookNotFoundError
+from app.library_model import Library
+from app.validate import validate_title, validate_author, validate_year, validate_status
 
 
 class TestLibrary(unittest.TestCase):

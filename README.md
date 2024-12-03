@@ -26,7 +26,7 @@
 
 2. **Запуск приложения**
     ```bash
-    python main.py
+    python3 -m app.main
     ```
 ---
 ## Использование
